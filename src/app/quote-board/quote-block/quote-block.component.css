@@ -1,0 +1,40 @@
+.mat-card {
+    background: inherit;
+    font: inherit;
+    color: #FEFFEC;
+    box-shadow: none !important;
+    padding: 3vh 3vw;
+}
+
+.mat-card>.mat-card-content {
+    font-size: 1.25em;
+    /* font-style: italic */
+}
+
+.mat-card-content>.quote {
+    /* font-style: italic; */
+    font-size: 1.25rem;
+    padding-bottom: 1vh;
+    /* font-style: italic; */
+}
+
+.author {
+    font-style: italic;
+    padding: 0 0.5vw;
+    font-size: 1rem;
+    /* font-style: italic; */
+}
+
+.mat-icon {
+    padding: 0 20px;
+    cursor: pointer;
+    /* color: #E7B680; */
+}
+
+.favourite>.mat-icon {
+    padding: 0;
+}
+
+.favourite>.mat-icon:hover {
+    fill: #FEFFEC
+}

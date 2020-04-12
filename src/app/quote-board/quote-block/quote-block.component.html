@@ -1,0 +1,19 @@
+<mat-card>
+    <mat-card-content fxLayout="column">
+        <span class="quote">" {{ quote.quote }} "</span>
+        <div fxLayout="row" fxLayoutAlign="end">
+            <span>-</span>
+            <span class="author">{{ quote.author }}</span>
+            <span>-</span>
+        </div>
+    </mat-card-content>
+    <mat-card-actions fxLayout="row" fxLayout="row" fxLayoutAlign="space-between stretch">
+        <div class="favourite" fxFLexAlign="start">
+            <mat-icon aria-hidden="false" aria-label="Favoutite quote" *ngFor="let number of [0, 1, 2, 3, 4]">
+                star_outline</mat-icon>
+        </div>
+        <div class="vote" fxFlexAlign="end">
+            <mat-icon aria-hidden="false" aria-label="favourite quote">favorite_border</mat-icon>
+        </div>
+    </mat-card-actions>
+</mat-card>

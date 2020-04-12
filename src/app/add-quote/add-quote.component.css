@@ -1,0 +1,25 @@
+.new-quote-modal {
+    border-radius: 0px;
+    /* border: #b78240 solid 10px; */
+    padding: none;
+    /* background-color: #E7B680; */
+}
+
+::ng-deep .mat-dialog-container {
+    border-radius: 0px;
+    /* border: #B78240 solid 10px; */
+    background-color: #E7B680;
+    /* background: url('../quote-board/board2.jpg'); */
+}
+
+.add-quote-button {
+    background-color: #8FC0BC;
+}
+
+::ng-deep .quote .name {
+    color: #414140;
+}
+
+/* ::ng-deep .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+    color: #414140;
+} */

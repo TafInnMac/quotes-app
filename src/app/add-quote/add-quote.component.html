@@ -1,0 +1,23 @@
+<div class="new-quote-modal" fxLayout="column" fxLayoutAlign="start">
+    <h1 mat-dialog-title fxLayout="row" fxLayoutAlign="center">Add New Quote</h1>
+    <div mat-dialog-content fxLayout="column" fxLayoutAlign="space-evenly">
+        <mat-form-field fxFlex="100%" appearance="outline">
+            <mat-label>Quote</mat-label>
+            <textarea matInput class="quote" #quoteText></textarea>
+        </mat-form-field>
+        <div class="author" fxlayout="row" fxLayoutAlign="space-between">
+            <mat-form-field fxFlex="40%" appearance="outline">
+                <mat-label>First Name</mat-label>
+                <input matInput class="name" #firstName>
+            </mat-form-field>
+            <mat-form-field fxFlex="50%" appearance="outline">
+                <mat-label>Last Name</mat-label>
+                <input matInput class="name" #lastName>
+            </mat-form-field>
+        </div>
+
+    </div>
+    <div mat-dialog-actions fxLayout="row" fxLayoutAlign="center">
+        <button class="add-quote-button" mat-raised-button (click)="onAddQuote()">Add Quote</button>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+<div class="board-container" fxLayout="column" fxFlexFill fxLayoutAlign="start stretch">
+    <div class="board-header" fxLayout="row" fxLayoutAlign="space-between stretch" fxLayout.lt-sm="column" fxLayoutAlign.lt-sm="space-between">
+        <h1 class="board-title lg-view" fxFlexAlign="start center" fxLayoutAlign.lt-sm="center">Quotes Taken Out Of Context</h1>
+        <mat-form-field class="search-bar" appearance="outline">
+            <mat-label>Quote Search</mat-label>
+            <mat-icon matPrefix>search</mat-icon>
+            <input type="search" maxlength="25" size="40px" matInput>
+        </mat-form-field>
+    </div>
+    <div class="quotes-grid" fxFlex="1 1 auto" fxLayout="row wrap" fxLayout.lt-sm="column" fxLayoutAlign="space-between">
+        <app-quote-block
+            *ngFor="let quoteBlock of quotes" fxFlex.xs="100%" fxFlex="0 1 calc(33%)" fxFlex.lt-md="0 1 calc(50%)" fxFlex.lt-sm="100%"
+            [quote]="quoteBlock">
+        </app-quote-block>
+    </div>
+    <!-- <div class="board-footer" fxLayout="row" fxLayoutAlign="end end">
+        <button mat-icon-button aria-label="Add quote icon" fxFlex.lt-md="100%" fxFlex.lt-sm="100%">
+            <mat-icon class="add-quote">add_circle_outline</mat-icon>
+        </button>
+    </div> -->
+</div>

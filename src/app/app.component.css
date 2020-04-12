@@ -1,0 +1,86 @@
+/* header {
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    z-index: 1;
+} */
+
+.app-container {
+    height: 100%;
+}
+
+/* .app-toolbar { */
+    /* position: fixed; */
+    /* width: 100%; */
+    /* top: 0; */
+    /* z-index: 1; */
+/* } */
+
+/* .container {
+    margin: auto;
+    top: auto;
+    width: 100vw;
+    height: 80vh;
+    padding-top: 40px;
+    position: absolute;
+} */
+
+.board-section {
+    /* background-color: red; */
+    /* margin: auto; */
+    /* top: auto; */
+    overflow: auto;
+    /* max-width: 100%; */
+    max-height: inherit;
+    padding: 2vh 3vw 0vh 4vw;
+    /* position: asolute; */
+}
+
+footer {
+    /* width: 100%; */
+    padding: 0vh 1vw 4vh;
+    /* bottom: 1vh; */
+    /* position: absolute; */
+}
+
+footer > button {
+    background-color: #FEFFEC;
+    position: absolute;
+    z-index: 10;
+}
+
+.add-quote {
+    /* height:48px !important;
+    width:48px !important;
+    font-size:4em !important; */
+    color: #414140;
+}
+
+/* ::ng-deep .add-quote {
+    height:48px !important;
+    width:48px !important;
+    font-size:4em !important;
+} */
+
+
+/* footer > button { */
+    /* height: 3.5em;
+    width: 10em;
+    background-color: #FEFFEC;
+    color: #414140; */
+    /* font: inherit */
+/* } */
+
+/* app-quote-board{ */
+    /* padding: 3vh 3vw; */
+    /* width: inherit; */
+    /* height: 100%; */
+/* } */
+
+/* .example-container {
+    width: 400px;
+    height: 200px;
+    margin: 10px;
+    border: 1px solid #555;
+  }
+   */

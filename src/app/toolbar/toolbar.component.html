@@ -1,0 +1,7 @@
+<mat-toolbar fxLayout="row" fxLayoutAlign="space-between center">
+    <mat-menu #appMenu="matMenu">
+        <button mat-menu-item>Settings</button>
+        <button mat-menu-item>Log Out</button>
+    </mat-menu>
+    <mat-icon mat-icon-button [matMenuTriggerFor]="appMenu" class="user-avatar-icon" aria-hidden="false" aria-label="User avatar icon">person</mat-icon>
+</mat-toolbar>

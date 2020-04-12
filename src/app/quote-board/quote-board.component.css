@@ -1,0 +1,180 @@
+/* mat-grid-list {
+  border: 15px ridge #b3b3b3;
+} */
+
+/* mat-grid-tile {
+  background: lightblue;
+} */
+
+/* app-quote-block {
+  background: lightblue;
+} */
+
+@import url(https://fonts.googleapis.com/css?family=Walter+Turncoat);
+.board-container {
+  /* font-size: 30px; */
+  color: #FEFFEC;
+  font-family: "Walter Turncoat", cursive;
+  display: block;
+  /* width: 100%;
+  height: 100%; */
+/* height: 50%; */
+  /* margin: 5vh auto 0 auto; */
+  /* overflow-y: hidden;
+  overflow-x: scroll; */
+  overflow: auto;
+  box-shadow: -1px 2px 2px 0px #555, inset 0 0 10px 0 #555;
+  box-shadow: 22px 22px 34px -12px rgba(0, 0, 0, 0.5);
+  border-radius: 0px;
+  border: #B78240 solid 10px;
+  background-image: url('./board2.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  padding: 1vh 1vw;
+  /* resize:none; */
+}
+
+/* mat-grid-list { */
+
+/* font-size: 30px; */
+
+/* color: #E8E8E8; */
+
+/* font-family: "Walter Turncoat", cursive; */
+
+/* display: block; */
+
+/* width: 100%; */
+
+/* height: 100%; */
+
+/* min-height: auto; */
+
+/* margin: 30px auto 0 auto; */
+
+/* background-color: #497959; */
+
+/* overflow-y: auto; */
+
+/* box-shadow: -1px 2px 2px 0px #555, inset 0 0 10px 0 #555; */
+
+/* box-shadow: 22px 22px 34px -12px rgba(0,0,0,0.48); */
+
+/* border-radius: 0px; */
+
+/* border: #B78240 solid 10px; */
+
+/* background-image: url('./board2.jpg'); */
+
+/* background-size: cover; */
+
+/* background-repeat: no-repeat; */
+
+/* position: relative; */
+
+/* padding-top: 7.5rem
+} */
+
+.quotes-grid {
+  /* margin-top: 8vh; */
+  /* width: inherit; */
+  height: calc(100% - 7vh);
+  overflow: auto;
+  /* word-wrap: break-word; */
+  /* position: absolute */
+}
+
+/* mat-grid-list:after {
+  content: "";
+  display: block;
+  position: fixed;
+  border-radius: 0.1em 0.1em 0 0.1em;
+  width: 50px;
+  height: 8px;
+  background: #f1f1f1;
+  top: 80%;
+  margin-top: 75px;
+  margin-right: 50px;
+  right: 5%;
+  box-shadow: inset 0 -4px 1px rgba(0, 0, 0, 0.3), -1px -1px 1px rgba(0, 0, 0, 0.2), 0 2px 0 rgba(0, 0, 0, 0.3)
+} */
+
+.board-header {
+  width: 100%;
+  height: 7vh;
+  /* box-sizing: border-box; */
+  /* height: 8vh; */
+  /* padding-top: 2vh; */
+  /* position: fixed; */
+  /* z-index: 1; */
+  /* background: linear-gradient(to bottom, rgba(251, 251, 251, 1) 0%, rgba(251, 251, 251, 0)); */
+  /* top: inherit; */
+}
+
+.board-header > .lg-view {
+  display: inline-block;
+}
+
+.board-header > .sm-view {
+  display: none;
+}
+
+@media screen and (max-width: 700px) {
+  .board-header > .lg-view{
+     display:none;
+  }
+
+  .board-header > .sm-view{
+     display:inline-block;
+  }
+}
+
+.board-footer {
+height: 5vh;
+  /* width: inherit; */
+  /* box-sizing: border-box; */
+  /* height: 8vh; */
+  /* padding-top: 2vh; */
+  position: sticky;
+  /* z-index: 1; */
+  /* background: linear-gradient(to bottom, rgba(65, 65, 64, 0) 0%, rgba(65, 65, 64, 1)); */
+  bottom: 0;
+}
+
+.board-title {
+  font-size: 5vh;
+  /* padding: 1vh 0 0.5vh 2vw; */
+  font-family: inherit;
+  line-height: 1;
+  word-wrap: break-word;
+  text-decoration: underline;
+}
+
+.search-bar {
+  /* color: #FEFFEC; */
+  /* padding: 1vh 2vw 0 0; */
+  /* font-size: 1.15em; */
+  font-family: inherit;
+  /* padding: 100vh 10vw 0 auto; */
+  /* text-decoration: underline */
+  /* text-transform: uppercase; */
+}
+
+mat-label {
+  color: #FEFFEC;
+}
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+  color: #FEFFEC;
+}
+
+::ng-deep .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+  color: #FEFFEC;
+}
+
+/* ::ng-deep .add-quote {
+    height:48px !important;
+    width:48px !important;
+    font-size:4em !important;
+} */
