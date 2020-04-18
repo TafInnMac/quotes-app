@@ -13,7 +13,7 @@ export class AddQuoteComponent implements OnInit {
   @ViewChild('lastName') lastNameRef: ElementRef;
   @ViewChild('quoteText') quoteTextRef: ElementRef;
 
-  @Output() quoteAdded = new EventEmitter<Quote>();
+  // @Output() quoteAdded = new EventEmitter<Quote>();
 
   constructor(private quotesService: QuotesService) { }
 
@@ -27,7 +27,7 @@ export class AddQuoteComponent implements OnInit {
     const quoteQuote = this.quoteTextRef.nativeElement.value;
     const newQuote = new Quote(author, quoteQuote);
     this.quotesService.addQuote(newQuote);
-    this.quotesService.newQuoteAdded.emit(newQuote);
+    this.quotesService.newQuoteAdded.next(newQuote);
     // console.log("quote to be added:" + JSON.stringify(newQuote));
   }
 

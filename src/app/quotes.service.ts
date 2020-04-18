@@ -1,5 +1,6 @@
-import { Injectable, EventEmitter } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { Quote } from './quote-board/quote-block/quote.model';
+import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -11,9 +12,10 @@ export class QuotesService {
     new Quote('Chris', 'With my headache today, I can believe in everything!'),
     new Quote('Chris', "Did you do any shopping's lately?"),
     new Quote('Sean Adams', "Scary massive balls flying about"),
+    new Quote('Chris', "It's not gonna sting me if I'm not gonna squeeze it")
   ];
 
-  newQuoteAdded = new EventEmitter<Quote>();
+  newQuoteAdded = new Subject<Quote>();
 
   constructor() { }
 
