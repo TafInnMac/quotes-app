@@ -24,6 +24,11 @@
     padding-top: 40px;
     position: absolute;
 } */
+.virtual-board-area {
+    height: inherit;
+    padding: 1vh 1vh;
+    overflow-x: auto;
+}
 
 .board-section {
     /* background-color: red; */
@@ -31,8 +36,8 @@
     /* top: auto; */
     overflow: auto;
     /* max-width: 100%; */
-    max-height: inherit;
-    padding: 2vh 3vw 0vh 4vw;
+    /* max-height: inherit; */
+    /* padding: 2vh 3vw 0vh 4vw; */
     /* position: asolute; */
 }
 

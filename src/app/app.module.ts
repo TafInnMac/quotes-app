@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatTableModule } from '@angular/material/table';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -51,7 +53,9 @@ import { QuotesService } from './quotes.service';
     MatCardModule,
     MatGridListModule,
     MatDividerModule,
-    FormsModule
+    FormsModule,
+    MatPaginatorModule,
+    MatTableModule
   ],
   entryComponents: [
     MatFormFieldModule,

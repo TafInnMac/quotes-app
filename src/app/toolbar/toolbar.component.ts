@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { AddQuoteComponent } from '../add-quote/add-quote.component';
+import { QuotesService } from '../quotes.service';
 
 @Component({
   selector: 'app-toolbar',
@@ -7,9 +10,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ToolbarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private dialog: MatDialog, private quotesService: QuotesService) { }
 
   ngOnInit(): void {
   }
 
+  openDialog() {
+    const dialogRef = this.dialog.open(AddQuoteComponent, {
+      width: '40vw',
+      height: '33vh'
+    });
+  }
+
+  // applyFilter(event: Event) {
+  //   const filterValue = (event.target as HTMLInputElement).value;
+  //   this.quotesService.dataSource.filter = filterValue.trim().toLowerCase();
+  // }
 }

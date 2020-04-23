@@ -23,13 +23,16 @@
   <!-- <mat-drawer-container class="example-container">
     <mat-drawer mode="side" opened>Drawer content</mat-drawer>
   </mat-drawer-container> -->
-
-  <div class="board-section" fxFlex="1 1 auto">
-    <app-quote-board></app-quote-board>
+  <div class="virtual-board-area" fxLayout="row">
+    <div class="board-section" fxFlex="1 1 auto">
+      <app-quote-board></app-quote-board>
+    </div>
+    
+    
+    <!-- <footer fxLayout="row" fxLayoutAlign="end center" fxLayoutAlign.lt-sm="center">
+      <button style="cursor: pointer;" mat-fab aria-label="Add new quote" (click)="openDialog()">
+        <mat-icon class="add-quote">add</mat-icon>
+      </button>
+    </footer> -->
   </div>
-  <footer fxLayout="row" fxLayoutAlign="end center" fxLayoutAlign.lt-sm="center">
-    <button style="cursor: pointer;" mat-fab aria-label="Add new quote" (click)="openDialog()">
-      <mat-icon class="add-quote">add</mat-icon>
-    </button>
-  </footer>
 </div>

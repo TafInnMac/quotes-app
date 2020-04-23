@@ -1,28 +1,30 @@
 .mat-card {
     background: inherit;
-    font: inherit;
+    /* font: inherit; */
     color: #FEFFEC;
     box-shadow: none !important;
     padding: 3vh 3vw;
 }
 
-.mat-card>.mat-card-content {
-    font-size: 1.25em;
+/* .mat-card>.mat-card-content { */
+    /* font-size: 1.25em; */
     /* font-style: italic */
-}
+/* } */
 
 .mat-card-content>.quote {
-    /* font-style: italic; */
-    font-size: 1.25rem;
+    font-style: italic;
+    line-height: 3rem;
+    font-size: 2.5rem;
+    font-weight: 100;
     padding-bottom: 1vh;
     /* font-style: italic; */
 }
 
 .author {
-    font-style: italic;
+    font-weight: 500;
     padding: 0 0.5vw;
-    font-size: 1rem;
-    /* font-style: italic; */
+    font-size: 1.25rem;
+    font-style: bold;
 }
 
 .mat-icon {
