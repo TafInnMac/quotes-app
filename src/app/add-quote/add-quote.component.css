@@ -8,7 +8,8 @@
 ::ng-deep .mat-dialog-container {
     border-radius: 0px;
     /* border: #B78240 solid 10px; */
-    background-color: #E7B680;
+    /* background-color: #E7B680; */
+    background-color: #FEFFEC;
     /* background: url('../quote-board/board2.jpg'); */
 }
 
@@ -16,10 +17,39 @@
     background-color: #8FC0BC;
 }
 
-::ng-deep .quote .name {
-    color: #414140;
+textarea {
+    font-style: italic;
+    text-align: center;
+    resize: none;
+    font-size: 2.5em;
+    font-weight: 100;
 }
 
+input {
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+::ng-deep mat-option {
+    background-color: #FEFFEC;
+}
+
+::ng-deep .mat-option.mat-active {
+    background-color: #E7B680;
+}
+
+.author-field {
+    padding: 0;
+}
 /* ::ng-deep .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
     color: #414140;
 } */
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+    color: #FEFFEC;
+}
+
+::ng-deep .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+    color: #FEFFEC;
+}

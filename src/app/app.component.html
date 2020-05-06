@@ -27,12 +27,6 @@
     <div class="board-section" fxFlex="1 1 auto">
       <app-quote-board></app-quote-board>
     </div>
-    
-    
-    <!-- <footer fxLayout="row" fxLayoutAlign="end center" fxLayoutAlign.lt-sm="center">
-      <button style="cursor: pointer;" mat-fab aria-label="Add new quote" (click)="openDialog()">
-        <mat-icon class="add-quote">add</mat-icon>
-      </button>
-    </footer> -->
   </div>
+  <mat-paginator [pageSizeOptions]="[16]" showFirstLastButtons></mat-paginator>
 </div>

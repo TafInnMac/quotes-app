@@ -33,18 +33,17 @@
         <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
       </table> -->
-    <div class="board-header" fxLayout="row" fxLayoutAlign="space-between">
-        <button class="add-quote" fxLayoutAlign="center center" (click)="openDialog()" mat-button>
+    <!-- <div class="board-header" fxLayout="row" fxLayoutAlign="space-between"> -->
+        <!-- <button class="add-quote" fxLayoutAlign="center center" (click)="openDialog()" mat-button>
             <mat-icon matPrefix>add</mat-icon>
             Add Quote
-        </button>
-        <mat-form-field class="filter" appearance="outline">
+        </button> -->
+        <!-- <mat-form-field class="filter" appearance="outline">
             <mat-label>Filter Quotes</mat-label>
             <mat-icon matPrefix>search</mat-icon>
-            <!-- <input matInput (keyup)="applyFilter($event)" placeholder="Filter Quotes"> -->
             <input matInput (keyup)="applyFilter($event)">
-        </mat-form-field>
-    </div>
+        </mat-form-field> -->
+    <!-- </div> -->
 
     <div class="quotes-table">
         <table mat-table [dataSource]="dataSource" multiTemplateDataRows class="mat-elevation-z0">
@@ -82,7 +81,7 @@
             <tr mat-row *matRowDef="let row; columns: ['expandedDetail']" class="example-detail-row"></tr>
         </table>
     </div>
-    <div class="board-footer">
+    <!-- <div class="board-footer">
         <mat-paginator [pageSizeOptions]="[15]" showFirstLastButtons></mat-paginator>
-    </div>
+    </div> -->
 </div>

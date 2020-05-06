@@ -16,14 +16,14 @@ export class ToolbarComponent implements OnInit {
   }
 
   openDialog() {
-    const dialogRef = this.dialog.open(AddQuoteComponent, {
-      width: '40vw',
-      height: '33vh'
+    this.dialog.open(AddQuoteComponent, {
+      width: '60vw',
+      height: '40vh'
     });
   }
 
-  // applyFilter(event: Event) {
-  //   const filterValue = (event.target as HTMLInputElement).value;
-  //   this.quotesService.dataSource.filter = filterValue.trim().toLowerCase();
-  // }
+  applyFilter(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.quotesService.dataSource.filter = filterValue.trim().toLowerCase();
+  }
 }

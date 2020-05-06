@@ -9,8 +9,8 @@
     height: 100%;
 }
 
-/* .app-toolbar { */
-    /* position: fixed; */
+/* app-toolbar { */
+    /* height: 6vh; */
     /* width: 100%; */
     /* top: 0; */
     /* z-index: 1; */
@@ -26,7 +26,7 @@
 } */
 .virtual-board-area {
     height: inherit;
-    padding: 1vh 1vh;
+    /* padding: 0.5vh 0.5vh; */
     overflow-x: auto;
 }
 
@@ -36,7 +36,7 @@
     /* top: auto; */
     overflow: auto;
     /* max-width: 100%; */
-    /* max-height: inherit; */
+    /* height: calc(100%); */
     /* padding: 2vh 3vw 0vh 4vw; */
     /* position: asolute; */
 }
@@ -89,3 +89,22 @@ footer > button {
     border: 1px solid #555;
   }
    */
+
+   mat-paginator {
+    /* height: 3vh; */
+    background: inherit;
+    color: #414140;
+    /* width: inherit; */
+    /* box-sizing: border-box; */
+    /* height: 8vh; */
+    /* padding-top: 2vh; */
+    /* position: sticky; */
+    /* z-index: 1; */
+    /* background: linear-gradient(to bottom, rgba(65, 65, 64, 0) 0%, rgba(65, 65, 64, 1)); */
+    /* background: inherit; */
+    bottom: 0;
+  }
+
+  ::ng-deep mat-paginator {
+      font-weight: 400;
+  }

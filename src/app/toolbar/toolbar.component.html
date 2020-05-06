@@ -1,20 +1,18 @@
-<mat-toolbar fxLayout="row" fxLayoutAlign="space-between">
+<mat-toolbar fxLayout="row" fxLayoutAlign="space-between" fxFlexAlign="center">
     <!-- <button style="cursor: pointer;" mat-fab aria-label="Add new quote" (click)="openDialog()">
         <mat-icon class="add-quote">add</mat-icon>
     </button> -->
     <!-- <mat-icon matPrefix>format_quote</mat-icon> -->
-
-    <!-- <mat-form-field appearance="fill" (click)="openDialog()">
+    <button class="add-quote" fxLayoutAlign="center center" (click)="openDialog()" mat-button>
         <mat-icon matPrefix>add</mat-icon>
-        <input class="add-quote" matInput (keyup)="applyFilter($event)" placeholder="Got a quote to share? Add it here" disabled style="cursor: pointer;">
-    </mat-form-field> -->
+        Add Quote
+    </button>
 
-    <!-- <mat-form-field class="filter">
+    <mat-form-field class="filter" appearance="outline">
         <mat-label>Filter Quotes</mat-label>
-        <mat-icon matPrefix>search</mat-icon> -->
-        <!-- <input matInput (keyup)="applyFilter($event)" placeholder="Filter Quotes"> -->
-        <!-- <input matInput (keyup)="applyFilter($event)">
-    </mat-form-field> -->
+        <mat-icon matPrefix>search</mat-icon>
+        <input matInput (keyup)="applyFilter($event)">
+    </mat-form-field>
 
     <!-- <mat-form-field class="addNewQuote" appearance="outline"> -->
     <!-- <mat-label>Outline form field</mat-label> -->

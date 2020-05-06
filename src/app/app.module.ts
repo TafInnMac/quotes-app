@@ -1,30 +1,33 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+// import { ReactiveFormsModule, ... } from '@angular/forms'
+
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatTableModule } from '@angular/material/table';
-
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { ToolbarComponent } from './toolbar/toolbar.component';
-import { SidebarComponent } from './sidebar/sidebar.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
-import { AddQuoteComponent } from './add-quote/add-quote.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatCardModule } from '@angular/material/card';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatDividerModule } from '@angular/material/divider';
+
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { ToolbarComponent } from './toolbar/toolbar.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { AddQuoteComponent } from './add-quote/add-quote.component';
 import { QuoteBoardComponent } from './quote-board/quote-board.component';
 import { QuoteBlockComponent } from './quote-board/quote-block/quote-block.component';
-import { MatGridListModule } from '@angular/material/grid-list';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { MatDividerModule } from '@angular/material/divider';
-import { FormsModule } from '@angular/forms';
 import { QuotesService } from './quotes.service';
 
 @NgModule({
@@ -54,8 +57,10 @@ import { QuotesService } from './quotes.service';
     MatGridListModule,
     MatDividerModule,
     FormsModule,
+    ReactiveFormsModule,
     MatPaginatorModule,
-    MatTableModule
+    MatTableModule,
+    MatAutocompleteModule
   ],
   entryComponents: [
     MatFormFieldModule,
