@@ -19,7 +19,14 @@ export class QuotesService {
     new Quote('Sean', "If it's really windy, look at your toilet"),
     new Quote('Liam', "If a mile is 5 miles"),
     new Quote('Chris', "I was gonna ask you. Should I touch it?"),
-    new Quote('Sean', "It's either I carry on and look like Jesus...")
+    new Quote('Sean', "It's either I carry on and look like Jesus..."),
+    new Quote('Chris', "Ok I'm doing a break"),
+    new Quote('Sean', "If you can't take the heat, don't say the shit"),
+    new Quote('Sean', "It won't even detect ghosts"),
+    new Quote('Sean', "Demon updated for both accounts and management"),
+    new Quote('Sean', "I was wrong"),
+    new Quote('Chris', "Is it because we are in the future?"),
+    new Quote('Neil', "What country is he from? Is he from Africa?")
   ];
 
   newQuoteAdded = new Subject<Quote>();
@@ -28,7 +35,7 @@ export class QuotesService {
   constructor() { }
 
   addQuote(newQuote: Quote) {
-    this.quotes.push(newQuote);
+    this.quotes.unshift(newQuote);
     this.dataSource._updateChangeSubscription();
   };
 

@@ -60,7 +60,8 @@ import { QuotesService } from './quotes.service';
     ReactiveFormsModule,
     MatPaginatorModule,
     MatTableModule,
-    MatAutocompleteModule
+    MatAutocompleteModule,
+    ReactiveFormsModule
   ],
   entryComponents: [
     MatFormFieldModule,

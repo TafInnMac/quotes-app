@@ -1,7 +1,7 @@
 import { Component, OnInit, ElementRef, ViewChild, EventEmitter, Output } from '@angular/core';
 import { Quote } from '../quote-board/quote-block/quote.model';
 import { QuotesService } from '../quotes.service';
-import { FormControl } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
 import { MatDialogRef } from '@angular/material/dialog';
@@ -13,6 +13,7 @@ import { MatDialogRef } from '@angular/material/dialog';
   // providers: [QuotesService]
 })
 export class AddQuoteComponent implements OnInit {
+  quoteForm: FormGroup;
   @ViewChild('authorField') authorRef: ElementRef;
   // @ViewChild('lastName') lastNameRef: ElementRef;
   @ViewChild('quoteText') quoteTextRef: ElementRef;
@@ -25,6 +26,11 @@ export class AddQuoteComponent implements OnInit {
   filteredAuthors: Observable<string[]>;
 
   ngOnInit(): void {
+    this.quoteForm = new FormGroup({
+      'quote': new FormControl(null, Validators.required),
+      'author': new FormControl(null, Validators.required)
+    });
+
     this.filteredAuthors = this.myControl.valueChanges
       .pipe(
         startWith(''),
