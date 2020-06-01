@@ -45,6 +45,9 @@ input {
 /* ::ng-deep .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
     color: #414140;
 } */
+.quote-added {
+    background-color: #FEFFEC;
+}
 
 ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
     color: #FEFFEC;

@@ -12,3 +12,13 @@ body {
     background-color: #8FC0BC;
     /* background-image: url('./app/quote-board/board2.jpg'); */
 }
+
+.quote-added {
+    background-color: #FEFFEC;
+    color: #414140;
+    text-align: center;
+}
+
+.quote-added > .mat-simple-snackbar {
+    justify-content: center;
+}

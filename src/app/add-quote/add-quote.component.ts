@@ -1,7 +1,9 @@
 import { Component, OnInit, ElementRef, ViewChild, EventEmitter, Output } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { MatSnackBar, MatSnackBarHorizontalPosition, MatSnackBarVerticalPosition } from '@angular/material/snack-bar';
+
 import { Quote } from '../quote-board/quote-block/quote.model';
 import { QuotesService } from '../quotes.service';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
 import { MatDialogRef } from '@angular/material/dialog';
@@ -20,7 +22,7 @@ export class AddQuoteComponent implements OnInit {
 
   // @Output() quoteAdded = new EventEmitter<Quote>();
 
-  constructor(private dialogef: MatDialogRef<AddQuoteComponent>, private quotesService: QuotesService) { }
+  constructor(private dialogef: MatDialogRef<AddQuoteComponent>, private quotesService: QuotesService, private snackBar: MatSnackBar) { }
   myControl = new FormControl();
   authors: string[] = this.quotesService.getAuthorNames();
   filteredAuthors: Observable<string[]>;
@@ -36,6 +38,13 @@ export class AddQuoteComponent implements OnInit {
         startWith(''),
         map(value => this._filter(value))
       );
+  }
+
+  openSnackBar(author: string) {
+    this.snackBar.open(`New quote from ${author.toUpperCase()} added!`, null, {
+      duration: 3000,
+      panelClass: ['quote-added']
+    });
   }
 
   private _filter(value: string): string[] {
