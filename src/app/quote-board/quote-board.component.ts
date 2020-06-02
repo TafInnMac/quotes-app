@@ -63,7 +63,7 @@ export class QuoteBoardComponent implements OnInit {
   openDialog() {
     this.dialog.open(AddQuoteComponent, {
       width: '60vw',
-      height: '40vh'
+      height: '30vh'
     });
   }
 }

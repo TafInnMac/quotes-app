@@ -1,6 +1,6 @@
 import { Component, OnInit, ElementRef, ViewChild, EventEmitter, Output } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { MatSnackBar, MatSnackBarHorizontalPosition, MatSnackBarVerticalPosition } from '@angular/material/snack-bar';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 import { Quote } from '../quote-board/quote-block/quote.model';
 import { QuotesService } from '../quotes.service';
@@ -16,21 +16,23 @@ import { MatDialogRef } from '@angular/material/dialog';
 })
 export class AddQuoteComponent implements OnInit {
   quoteForm: FormGroup;
-  @ViewChild('authorField') authorRef: ElementRef;
-  // @ViewChild('lastName') lastNameRef: ElementRef;
-  @ViewChild('quoteText') quoteTextRef: ElementRef;
-
-  // @Output() quoteAdded = new EventEmitter<Quote>();
 
   constructor(private dialogef: MatDialogRef<AddQuoteComponent>, private quotesService: QuotesService, private snackBar: MatSnackBar) { }
+
   myControl = new FormControl();
   authors: string[] = this.quotesService.getAuthorNames();
   filteredAuthors: Observable<string[]>;
+  newQuote: Quote = {
+    quote: '',
+    author: '',
+    date: new Date()
+  }
 
   ngOnInit(): void {
     this.quoteForm = new FormGroup({
       'quote': new FormControl(null, Validators.required),
-      'author': new FormControl(null, Validators.required)
+      'author': new FormControl(null, Validators.required),
+      'date': new FormControl(new Date())
     });
 
     this.filteredAuthors = this.myControl.valueChanges
@@ -54,16 +56,13 @@ export class AddQuoteComponent implements OnInit {
   }
 
   onAddQuote() {
-    // const firstName = this.firstNameRef.nativeElement.value;
-    // const lastName = this.lastNameRef.nativeElement.value;
-    const author = this.authorRef.nativeElement.value;
-    const quoteQuote = this.quoteTextRef.nativeElement.value;
-    const newQuote = new Quote(author, quoteQuote);
-    this.quotesService.addQuote(newQuote);
-    this.quotesService.newQuoteAdded.next(newQuote);
+    this.newQuote.quote = this.quoteForm.value.quote;
+    this.newQuote.author = this.quoteForm.value.author;
+    this.newQuote.date = this.quoteForm.value.date;
+    this.quotesService.addQuote(this.newQuote);
+    this.quotesService.newQuoteAdded.next(this.newQuote);
     this.quotesService.getAuthorNames();
     this.dialogef.close();
-    // console.log("quote to be added:" + JSON.stringify(newQuote));
   }
 
 

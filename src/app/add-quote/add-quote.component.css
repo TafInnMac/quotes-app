@@ -25,11 +25,11 @@ textarea {
     font-weight: 100;
 }
 
-input {
+/* input {
     text-align: center;
     font-size: 1.25rem;
     font-weight: bold;
-}
+} */
 
 ::ng-deep mat-option {
     background-color: #FEFFEC;
@@ -41,6 +41,14 @@ input {
 
 .author-field {
     padding: 0;
+    margin-top: -2.80vh;
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.quote-date {
+    margin-top: -0.8vh;
 }
 /* ::ng-deep .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
     color: #414140;

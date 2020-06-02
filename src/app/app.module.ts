@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-// import { ReactiveFormsModule, ... } from '@angular/forms'
+import { MatDatepickerModule } from '@angular/material/datepicker';
 
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatTableModule } from '@angular/material/table';
@@ -21,6 +21,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatSortModule } from '@angular/material/sort'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -30,6 +31,7 @@ import { AddQuoteComponent } from './add-quote/add-quote.component';
 import { QuoteBoardComponent } from './quote-board/quote-board.component';
 import { QuoteBlockComponent } from './quote-board/quote-block/quote-block.component';
 import { QuotesService } from './quotes.service';
+import { MatNativeDateModule } from '@angular/material/core';
 
 @NgModule({
   declarations: [
@@ -63,7 +65,10 @@ import { QuotesService } from './quotes.service';
     MatTableModule,
     MatAutocompleteModule,
     ReactiveFormsModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatDatepickerModule,
+    MatSortModule,
+    MatNativeDateModule
   ],
   entryComponents: [
     MatFormFieldModule,
