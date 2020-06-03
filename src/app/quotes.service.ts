@@ -27,7 +27,8 @@ export class QuotesService {
     new Quote('Sean', "Demon updated for both accounts and management", new Date(2020, 4, 28)),
     new Quote('Sean', "I was wrong", new Date(2020, 4, 28)),
     new Quote('Chris', "Is it because we are in the future?", new Date(2020, 4, 29)),
-    new Quote('Neil', "What country is he from? Is he from Africa?", new Date(2020, 4, 29))
+    new Quote('Neil', "What country is he from? Is he from Africa?", new Date(2020, 4, 29)),
+    new Quote('Chris', "You can't go in the past because you are in the future", new Date(2020, 5, 3))
   ];
 
   newQuoteAdded = new Subject<Quote>();
