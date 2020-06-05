@@ -8,6 +8,8 @@ import { QuotesService } from '../quotes.service';
 // import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import { AddQuoteComponent } from '../add-quote/add-quote.component';
+import { MatSort, MatSortable } from '@angular/material/sort';
+
 
 @Component({
   selector: 'app-quote-board',
@@ -25,6 +27,7 @@ import { AddQuoteComponent } from '../add-quote/add-quote.component';
 export class QuoteBoardComponent implements OnInit {
   @Input() quote: Quote;
   // @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
+  @ViewChild(MatSort, {static: true}) sort: MatSort;
 
   expandedElement: Quote | null;
 
@@ -48,7 +51,8 @@ export class QuoteBoardComponent implements OnInit {
     // this.quotes = this.quotesService.quotes;
     // this.quotes = new MatTableDataSource(this.quotesService.quotes);\
     // this.dataSource.paginator = this.paginator
-
+    this.sort.sort(({ id: 'date', start: 'desc' }) as MatSortable);
+    this.dataSource.sort = this.sort;
   }
 
   // applyFilter(event: Event) {

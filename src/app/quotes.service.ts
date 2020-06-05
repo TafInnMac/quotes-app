@@ -2,7 +2,7 @@ import { Injectable, ViewChild } from '@angular/core';
 import { Quote } from './quote-board/quote-block/quote.model';
 import { Subject } from 'rxjs';
 import { MatTableDataSource } from '@angular/material/table';
-import { MatSort } from '@angular/material/sort';
+import { MatSort, MatSortable } from '@angular/material/sort';
 
 @Injectable({
   providedIn: 'root'
@@ -33,19 +33,22 @@ export class QuotesService {
 
   newQuoteAdded = new Subject<Quote>();
   dataSource = new MatTableDataSource(this.quotes);
-  @ViewChild(MatSort, {static: true}) sort: MatSort;
 
-  constructor() { }
+  @ViewChild(MatSort, { static: true }) sort: MatSort;
 
-  addQuote(newQuote: Quote) {
-    this.quotes.unshift(newQuote);
-    // this.quotes.push(newQuote);
-    this.dataSource._updateChangeSubscription();
-  };
 
-  getAuthorNames() {
-    let authorNames:string[] = [];
-    authorNames = this.quotes.map(quote => { return quote.author });
-    return authorNames.filter((a, b) => authorNames.indexOf(a) === b);
-  }
+
+constructor() { }
+
+addQuote(newQuote: Quote) {
+  // this.quotes.unshift(newQuote);
+  this.quotes.push(newQuote);
+  this.dataSource._updateChangeSubscription();
+};
+
+getAuthorNames() {
+  let authorNames: string[] = [];
+  authorNames = this.quotes.map(quote => { return quote.author });
+  return authorNames.filter((a, b) => authorNames.indexOf(a) === b);
+}
 }
